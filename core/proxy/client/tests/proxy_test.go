@@ -8,8 +8,8 @@ import (
 	"testing"
 	"time"
 
-	proxyclient "github.com/snail007/goproxy/core/proxy/client"
-	sdk "github.com/snail007/goproxy/sdk/android-ios"
+	proxyclient "github.com/yoooov/goproxy6.9/core/proxy/client"
+	sdk "github.com/yoooov/goproxy6.9/sdk/android-ios"
 )
 
 func TestSocks5(t *testing.T) {
@@ -25,11 +25,11 @@ func TestSocks5(t *testing.T) {
 		if e != nil {
 			t.Fatal(e)
 		}
-		e = p.DialConn(&c, "tcp", "www.baidu.com:80")
+		e = p.DialConn(&c, "tcp", "www.google.com:80")
 		if e != nil {
 			t.Fatal(e)
 		}
-		_, e = c.Write([]byte("Get / http/1.1\r\nHost: www.baidu.com\r\n"))
+		_, e = c.Write([]byte("Get / http/1.1\r\nHost: www.google.com\r\n"))
 		if e != nil {
 			t.Fatal(e)
 		}
@@ -38,7 +38,7 @@ func TestSocks5(t *testing.T) {
 			t.Fatal(e)
 		}
 		if !strings.HasPrefix(string(b), "HTTP") {
-			t.Fatalf("request baidu fail:%s", string(b))
+			t.Fatalf("request google fail:%s", string(b))
 		}
 	}
 	sdk.Stop("s1")
@@ -58,11 +58,11 @@ func TestSocks5Auth(t *testing.T) {
 		if e != nil {
 			t.Fatal(e)
 		}
-		e = p.DialConn(&c, "tcp", "www.baidu.com:80")
+		e = p.DialConn(&c, "tcp", "www.google.com:80")
 		if e != nil {
 			t.Fatal(e)
 		}
-		_, e = c.Write([]byte("Get / http/1.1\r\nHost: www.baidu.com\r\n"))
+		_, e = c.Write([]byte("Get / http/1.1\r\nHost: www.google.com\r\n"))
 		if e != nil {
 			t.Fatal(e)
 		}
@@ -71,7 +71,7 @@ func TestSocks5Auth(t *testing.T) {
 			t.Fatal(e)
 		}
 		if !strings.HasPrefix(string(b), "HTTP") {
-			t.Fatalf("request baidu fail:%s", string(b))
+			t.Fatalf("request google fail:%s", string(b))
 		}
 	}
 	sdk.Stop("s1")
