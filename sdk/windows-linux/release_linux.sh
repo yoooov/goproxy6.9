@@ -1,9 +1,9 @@
 #/bin/bash
 VERSION=$(cat ../../VERSION)
 VER="${VERSION}_$(date '+%Y%m%d%H%M%S')"
-X="-X github.com/snail007/goproxy/sdk/android-ios.SDK_VERSION=$VER -X main.APP_VERSION=$VER"
-TRIMPATH1="/Users/snail/go/src/github.com/snail007"
-TRIMPATH=$(dirname ~/go/src/github.com/snail007)/snail007
+X="-X github.com/yoooov/goproxy6.9/sdk/android-ios.SDK_VERSION=$VER -X main.APP_VERSION=$VER"
+TRIMPATH1="${GOPATH}/src/github.com/yoooov"
+TRIMPATH=$(dirname ~/go-workspace/src/github.com/yoooov)/yoooov
 if [ -d "$TRIMPATH1" ];then
 	TRIMPATH=$TRIMPATH1
 fi
