@@ -17,7 +17,7 @@ mkdir android
 #go get -v golang.org/x/mobile/cmd/gomobile
 #gomobile init
 
-gomobile bind -v -target=android -javapkg=snail007 -ldflags="-s -w $X"
+gomobile bind -v -target=android -javapkg=yoooov -ldflags="-s -w $X"
 mv proxy.aar android/yoooov.goproxy.sdk.aar
 mv proxy-sources.jar android/yoooov.goproxy.sdk-sources.jar
 cp ../README.md android
