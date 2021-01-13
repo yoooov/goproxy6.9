@@ -20,7 +20,7 @@ import (
 	mux "github.com/yoooov/goproxy6.9/services/mux"
 	socksx "github.com/yoooov/goproxy6.9/services/socks"
 	spsx "github.com/yoooov/goproxy6.9/services/sps"
-	tcpx "github.com/syoooov/goproxy6.9/services/tcp"
+	tcpx "github.com/yoooov/goproxy6.9/services/tcp"
 	tunnelx "github.com/yoooov/goproxy6.9/services/tunnel"
 	udpx "github.com/yoooov/goproxy6.9/services/udp"
 
