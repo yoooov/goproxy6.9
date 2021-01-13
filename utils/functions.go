@@ -22,8 +22,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/snail007/goproxy/core/lib/kcpcfg"
-	"github.com/snail007/goproxy/utils/lb"
+	"github.com/yoooov/goproxy6.9/core/lib/kcpcfg"
+	"github.com/yoooov/goproxy6.9/utils/lb"
 
 	"golang.org/x/crypto/pbkdf2"
 
@@ -31,7 +31,7 @@ import (
 
 	"time"
 
-	"github.com/snail007/goproxy/utils/id"
+	"github.com/yoooov/goproxy6.9/utils/id"
 
 	kcp "github.com/xtaci/kcp-go"
 )
